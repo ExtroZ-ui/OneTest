@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OneTest.form;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,12 @@ namespace OneTest
 
         private void Serch_click(object sender, RoutedEventArgs e)
         {
+            new Serch().Show();
+        }
+
+        private void AddBasi_Click(object sender, RoutedEventArgs e)
+        {
+            new Add().Show();
         }
     }
 }

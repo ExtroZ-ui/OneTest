@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace OneTest.form
 {
     /// <summary>
-    /// Логика взаимодействия для Serch.xaml
+    /// Логика взаимодействия для Add.xaml
     /// </summary>
-    public partial class Serch : Window
+    public partial class Add : Window
     {
-        public Serch()
+        public Add()
         {
             InitializeComponent();
         }

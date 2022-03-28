@@ -19,7 +19,7 @@
         <Button Content="В список" HorizontalAlignment="Left" FontSize="13" Margin="680,219,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.522,0.381"/>
         <Button Content="Отчет" HorizontalAlignment="Left" FontSize="14" Margin="680,96,0,0" VerticalAlignment="Top" Width="102" Height="30"/>
         <Button Content="Поиск " HorizontalAlignment="Left" FontSize="14" Margin="680,61,0,0" VerticalAlignment="Top" Width="102" Height="30" Click="Serch_click"/>
-        <Button Content="Добавить " FontSize="14" Margin="680,0,0,236" VerticalAlignment="Bottom" Height="30" HorizontalAlignment="Left" Width="102"/>
+        <Button Content="Добавить " FontSize="14" Margin="680,0,0,236" VerticalAlignment="Bottom" Height="30" HorizontalAlignment="Left" Width="102" Click="AddBasi_Click"/>
 
         <DataGrid Margin="10,10,117,10" Grid.RowSpan="2">
             <DataGrid.Columns>
