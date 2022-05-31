@@ -35,12 +35,30 @@ namespace OneTest.form
 
         private void serc_Click(object sender, RoutedEventArgs e)
         {
-            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Organization == textSercOrg.Text).ToList();
+
+            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Organization.StartsWith(textSercOrg.Text));
+            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Mark.StartsWith(textSercMark.Text));
+            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Number.StartsWith(textSercnumber.Text));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void textSercOrg_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Organization.StartsWith(textSercOrg.Text));
+        }
+
+        private void textSercMark_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Mark.StartsWith(textSercMark.Text));
+        }
+
+        private void textSercnumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Number.StartsWith(textSercnumber.Text));
         }
     }
 }

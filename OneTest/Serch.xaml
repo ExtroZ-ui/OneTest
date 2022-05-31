@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Serch" Height="450" Width="800">
     <Grid>
+        <Image HorizontalAlignment="Left" Height="32" Margin="742,0,-32,0" VerticalAlignment="Top" Width="38" Source="/ic/ic.jpg" />
         <DataGrid x:Name="BdCars" Margin="10,10,117,72" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Организация" Binding="{Binding Path=Organization}" Width="160"/>
@@ -16,11 +17,11 @@
             </DataGrid.Columns>
         </DataGrid>
         <Label Content="Организация" HorizontalAlignment="Left" Margin="46,352,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textSercOrg" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="171"/>
+        <TextBox x:Name="textSercOrg" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="171" TextChanged="textSercOrg_TextChanged"/>
         <Label Content="Марка" HorizontalAlignment="Left" Margin="242,352,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textSercMark" HorizontalAlignment="Left" Margin="206,383,0,0" VerticalAlignment="Top" Width="171"/>
+        <TextBox x:Name="textSercMark" HorizontalAlignment="Left" Margin="206,383,0,0" VerticalAlignment="Top" Width="171" TextChanged="textSercMark_TextChanged"/>
         <Label Content="Номер" HorizontalAlignment="Left" Margin="448,352,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textSercnumber" HorizontalAlignment="Left" Height="23" Margin="415,382,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textSercnumber" HorizontalAlignment="Left" Height="23" Margin="415,382,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="textSercnumber_TextChanged"/>
         <Button x:Name="serc" Content="Поиск" HorizontalAlignment="Left" Margin="707,358,0,0" VerticalAlignment="Top" Width="75" Click="serc_Click" Background="Blue" Foreground="White"/>
         <Button Content="Выход" HorizontalAlignment="Left" Margin="707,390,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Background="Blue" Foreground="White"/>
 
