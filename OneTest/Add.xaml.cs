@@ -32,6 +32,7 @@ namespace OneTest.form
         private void close_Click(object sender, RoutedEventArgs e)
         {
             Close();
+            new MainWindow().Show();
         }
 
         private void saveNew_Click(object sender, RoutedEventArgs e)
