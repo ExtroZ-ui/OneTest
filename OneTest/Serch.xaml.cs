@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +20,27 @@ namespace OneTest.form
     /// </summary>
     public partial class Serch : Window
     {
+        ApplicationContext db;
         public Serch()
         {
             InitializeComponent();
+            db = new ApplicationContext();
+            db.Cars.Load();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void serc_Click(object sender, RoutedEventArgs e)
+        {
+            BdCars.ItemsSource = db.Cars.Local.ToBindingList().Where(a => a.Organization == textSercOrg.Text).ToList();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

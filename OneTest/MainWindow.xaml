@@ -6,29 +6,23 @@
         xmlns:local="clr-namespace:OneTest"
         mc:Ignorable="d"
         Background="LightCyan"
-         Title="Пропуски для атотранспорта" Height="500" Width="800">
+         Title="Пропуски для атотранспорта" Height="329" Width="900">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="354*"/>
-            <RowDefinition Height="215*"/>
-        </Grid.RowDefinitions>
-        <Button Content="Выход" HorizontalAlignment="Left" Margin="680,131,0,0" FontSize="14" VerticalAlignment="Top" Width="102" Height="30"/>
-        <Button Content="ПЕЧАТЬ выездные" HorizontalAlignment="Left" Margin="680,258,0,0" VerticalAlignment="Top" Width="102" Height="30"/>
-        <Button Content="ПЕЧАТЬ не выездные" HorizontalAlignment="Left" Margin="680,6,0,0" VerticalAlignment="Top" Width="102" Height="30" Grid.Row="1"/>
-        <Button Content="Удалить всё" HorizontalAlignment="Left" Margin="680,45,0,0" VerticalAlignment="Top" Width="102" Height="30" Grid.Row="1"/>
-        <Button Content="В список" HorizontalAlignment="Left" FontSize="13" Margin="680,219,0,0" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.522,0.381"/>
-        <Button Content="Отчет" HorizontalAlignment="Left" FontSize="14" Margin="680,96,0,0" VerticalAlignment="Top" Width="102" Height="30"/>
-        <Button Content="Поиск " HorizontalAlignment="Left" FontSize="14" Margin="680,61,0,0" VerticalAlignment="Top" Width="102" Height="30" Click="Serch_click"/>
-        <Button Content="Добавить " FontSize="14" Margin="680,0,0,236" VerticalAlignment="Bottom" Height="30" HorizontalAlignment="Left" Width="102" Click="AddBasi_Click"/>
+        <Button x:Name="Exit" Content="Выход" HorizontalAlignment="Left" Margin="772,258,0,0" FontSize="14" VerticalAlignment="Top" Width="102" Height="30" Background="Blue" Foreground="White" Click="Exit_Click"/>
+        <Button Content="ПЕЧАТЬ выездные" HorizontalAlignment="Left" Margin="775,179,0,0" VerticalAlignment="Top" Width="110" Height="30" Background="Blue" Foreground="White" Click="Button_Click"/>
+        <Button x:Name="not" Content="ПЕЧАТЬ не выездные" HorizontalAlignment="Left" Margin="775,214,0,0" VerticalAlignment="Top" Width="110" Height="30" Background="Blue" Foreground="White" Click="not_Click"/>
+        <Button x:Name="otchet" Content="Отчет" HorizontalAlignment="Left" FontSize="14" Margin="775,105,0,0" VerticalAlignment="Top" Width="102" Height="30" Background="Blue" Foreground="White" Click="otchet_Click" RenderTransformOrigin="0.52,0.533"/>
+        <Button Content="Поиск " HorizontalAlignment="Left" FontSize="14" Margin="775,70,0,0" VerticalAlignment="Top" Width="102" Height="30" Click="Serch_click" Background="Blue" Foreground="White"/>
+        <Button Content="Добавить " FontSize="14" Margin="775,0,0,233" VerticalAlignment="Bottom" Height="30" HorizontalAlignment="Left" Width="102" Click="AddBasi_Click" Background="Blue" Foreground="White" />
 
-        <DataGrid Margin="10,10,117,10" Grid.RowSpan="2">
+        <DataGrid x:Name="BdCars" Margin="10,10,117,10" AutoGenerateColumns="False" Grid.RowSpan="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Организация" Binding="{Binding Path=Compan}" Width="160"/>
-                <DataGridTextColumn Header="Марка" Binding="{Binding Path=Marka}" Width="100"/>
-                <DataGridTextColumn Header="Номер" Binding="{Binding Path=Marka}" Width="90"/>
-                <DataGridTextColumn Header="Штрихкод" Binding="{Binding Path=Marka}" Width="90"/>
-                <DataGridTextColumn Header="Add" Binding="{Binding Path=Marka}" Width="90"/>
+                <DataGridTextColumn Header="Организация" Binding="{Binding Path=Organization}" Width="160"/>
+                <DataGridTextColumn Header="Марка" Binding="{Binding Path=Mark}" Width="100"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Path=Number}" Width="90"/>
+                <DataGridTextColumn Header="Add" Binding="{Binding Path=Add}" Width="90"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="objRemov" Content="Удалить" HorizontalAlignment="Left" FontSize="14" Margin="775,140,0,0" VerticalAlignment="Top" Width="102" Height="30" Background="Blue" Foreground="White" Click="objRemov_Click" RenderTransformOrigin="0.5,0.533"/>
     </Grid>
 </Window>

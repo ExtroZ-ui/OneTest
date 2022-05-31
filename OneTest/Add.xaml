@@ -8,14 +8,14 @@
         Title="Add" Height="250" Width="500">
     <Grid>
         <Label Content="Организация" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="171"/>
+        <TextBox x:Name="textOrgan" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="171"/>
         <Label Content="Марка" HorizontalAlignment="Left" Margin="290,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="231,41,0,0" VerticalAlignment="Top" Width="171"/>
+        <TextBox x:Name="textMarka" HorizontalAlignment="Left" Margin="231,41,0,0" VerticalAlignment="Top" Width="171"/>
         <Label Content="Номер" HorizontalAlignment="Left" Margin="65,93,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="32,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Сохранить" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Margin="417,43,0,0"/>
-        <Button Content="Выход" HorizontalAlignment="Left" Margin="417,123,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="textNomer" HorizontalAlignment="Left" Height="23" Margin="32,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Button x:Name="saveNew" Content="Сохранить" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Margin="417,43,0,0" Click="saveNew_Click" Background="Blue" Foreground="White"/>
+        <Button x:Name="close" Content="Выход" HorizontalAlignment="Left" Margin="417,123,0,0" VerticalAlignment="Top" Width="75" Click="close_Click" Background="Blue" Foreground="White"/>
         <Label Content="Предлагаемы штрихкод" HorizontalAlignment="Left" Margin="249,93,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="231,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171"/>
+        <TextBox x:Name="textStrex" HorizontalAlignment="Left" Height="23" Margin="231,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171"/>
     </Grid>
 </Window>
